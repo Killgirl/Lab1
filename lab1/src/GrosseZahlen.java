@@ -40,8 +40,21 @@ public class GrosseZahlen {
             arrfinal = Arrays.copyOf(arrfinal, arrfinal.length + 1);
             arrfinal[arrfinal.length-1] = array[i]-other.array[i];
         }
-
-        return arrfinal;
+        for(int i=0; i<arrfinal.length; i++) {
+            if (arrfinal[i] < 0) {
+                if (arrfinal.length != i + 1) {
+                    arrfinal[i+1] = arrfinal[i+1]-1;
+                    arrfinal[i] = 10+arrfinal[i];
+                }
+                else
+                    i++;
+            }
+        }
+        for(int i=arrfinal.length-1; i > -1; i--){
+            arrDiff = Arrays.copyOf(arrDiff, arrDiff.length + 1);
+            arrDiff[arrDiff.length-1] = arrfinal[i];
+        }
+        return arrDiff;
     }
 
 
