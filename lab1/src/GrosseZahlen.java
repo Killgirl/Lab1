@@ -90,10 +90,9 @@ public class GrosseZahlen {
         int[] arrfinal = {};
         int[] arrDiv = {};
         int r=0;
-        for(int i = array.length-1; i > -1; i--){
+        for(int i = 0; i < array.length; i++){
             arrfinal = Arrays.copyOf(arrfinal, arrfinal.length + 1);
-            
-            arrfinal[arrfinal.length-1] = array[i]/a+r;
+            arrfinal[arrfinal.length - 1] =(array[i] / a)+r;
             r=array[i]%a;
         }
         return arrfinal;
