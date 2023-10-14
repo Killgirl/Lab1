@@ -33,6 +33,16 @@ public class GrosseZahlen {
         return arrSumme;
     }
 
+    public int[] DifferenzArr(GrosseZahlen other) {
+        int[] arrfinal = {};
+        int[] arrDiff = {};
+        for(int i = array.length-1; i > -1; i--){
+            arrfinal = Arrays.copyOf(arrfinal, arrfinal.length + 1);
+            arrfinal[arrfinal.length-1] = array[i]-other.array[i];
+        }
+
+        return arrfinal;
+    }
 
 
 }
