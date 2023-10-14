@@ -66,6 +66,23 @@ public class GrosseZahlen {
             arrfinal = Arrays.copyOf(arrfinal, arrfinal.length + 1);
             arrfinal[arrfinal.length-1] = array[i]*a;
         }
-        return arrfinal;
+        for(int i=0; i<arrfinal.length; i++) {
+            if (arrfinal[i] >= 10) {
+                if (arrfinal.length == i + 1) {
+                    arrfinal = Arrays.copyOf(arrfinal, arrfinal.length + 1);
+                    arrfinal[arrfinal.length - 1] = arrfinal[i] / 10;
+                    arrfinal[i] = arrfinal[i] % 10;
+                }
+                else {
+                    arrfinal[i + 1] = (arrfinal[i] / 10) + arrfinal[i + 1];
+                    arrfinal[i] = arrfinal[i] % 10;
+                }
+            }
+        }
+        for(int i=arrfinal.length-1; i > -1; i--){
+            arrMultiplik = Arrays.copyOf(arrMultiplik, arrMultiplik.length + 1);
+            arrMultiplik[arrMultiplik.length-1] = arrfinal[i];
+        }
+        return arrMultiplik;
     }
 }

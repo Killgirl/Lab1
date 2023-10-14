@@ -14,6 +14,6 @@ public class Main {
         System.out.println(Arrays.toString(arr3.SummeArr(arr4)));
         GrosseZahlen arr5 = new GrosseZahlen(array2);
         System.out.println(Arrays.toString(arr3.DifferenzArr(arr5)));
-
+        System.out.println(Arrays.toString(arr3.MultiplikationArr(3)));
     }
 }
