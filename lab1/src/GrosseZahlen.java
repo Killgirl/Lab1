@@ -8,9 +8,20 @@ public class GrosseZahlen {
     }
     public int[] SummeArr(GrosseZahlen other){
         int[] arrfinal={};
-        for(int i=0; i< array.length; i++){
+        int[] arrSeparat={};
+        for(int i = array.length-1; i > -1; i--){
             arrfinal = Arrays.copyOf(arrfinal, arrfinal.length + 1);
-            arrfinal[arrfinal.length - 1] = array[i]+other.array[i];
+            arrfinal[arrfinal.length-1] = array[i]+other.array[i];
+        }
+        for(int i=0; i<arrfinal.length; i++){
+            if (arrfinal[i]>=10){
+                if(arrfinal.length==i+1) {
+                    arrfinal = Arrays.copyOf(arrfinal, arrfinal.length + 1);
+                    arrfinal[arrfinal.length-1] = arrfinal[i] / 10;
+                    arrfinal[i] = arrfinal[i] % 10;
+                }
+                else
+            }
         }
         return arrfinal;
     }
