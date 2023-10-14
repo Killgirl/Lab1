@@ -92,7 +92,7 @@ public class GrosseZahlen {
         int r=0;
         for(int i = 0; i < array.length; i++){
             arrfinal = Arrays.copyOf(arrfinal, arrfinal.length + 1);
-            arrfinal[arrfinal.length - 1] =(array[i] / a)+r;
+            arrfinal[arrfinal.length - 1] =(10*r+array[i] )/ a;
             r=array[i]%a;
         }
         return arrfinal;
