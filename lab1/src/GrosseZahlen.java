@@ -50,6 +50,8 @@ public class GrosseZahlen {
                     i++;
             }
         }
+        if(arrfinal[arrfinal.length-1]==0)
+            arrfinal = Arrays.copyOf(arrfinal, arrfinal.length - 1);
         for(int i=arrfinal.length-1; i > -1; i--){
             arrDiff = Arrays.copyOf(arrDiff, arrDiff.length + 1);
             arrDiff[arrDiff.length-1] = arrfinal[i];
