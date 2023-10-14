@@ -59,5 +59,13 @@ public class GrosseZahlen {
         return arrDiff;
     }
 
-
+    public int[] MultiplikationArr(int a) {
+        int[] arrfinal = {};
+        int[] arrMultiplik = {};
+        for(int i = array.length-1; i > -1; i--){
+            arrfinal = Arrays.copyOf(arrfinal, arrfinal.length + 1);
+            arrfinal[arrfinal.length-1] = array[i]*a;
+        }
+        return arrfinal;
+    }
 }

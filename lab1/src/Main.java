@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         int[] array = {1,5,3};
-        int[] array2 = {0,6,1};
+        int[] array2 = {0,5,4};
         ArrZahlen arr = new ArrZahlen(array);
 
         System.out.println(arr.maximZahl());
