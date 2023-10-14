@@ -4,7 +4,7 @@ import java.util.Arrays;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        int[] array = {1,2,3};
+        int[] array = {1,5,3};
         ArrZahlen arr = new ArrZahlen(array);
 
         System.out.println(arr.maximZahl());

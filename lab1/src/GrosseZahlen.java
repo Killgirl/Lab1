@@ -20,7 +20,10 @@ public class GrosseZahlen {
                     arrfinal[arrfinal.length-1] = arrfinal[i] / 10;
                     arrfinal[i] = arrfinal[i] % 10;
                 }
-                else
+                else {
+                    arrfinal[i+1] = (arrfinal[i] / 10)+arrfinal[i+1];
+                    arrfinal[i] = arrfinal[i] % 10;
+                }
             }
         }
         return arrfinal;
