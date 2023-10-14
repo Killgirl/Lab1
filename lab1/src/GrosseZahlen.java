@@ -95,7 +95,16 @@ public class GrosseZahlen {
             arrfinal[arrfinal.length - 1] =(10*r+array[i] )/ a;
             r=array[i]%a;
         }
-        return arrfinal;
+        if(arrfinal[0]==0){
+            for(int i = 0; i < arrfinal.length-1; i++){
+                arrDiv = Arrays.copyOf(arrDiv, arrDiv.length + 1);
+                arrDiv[arrDiv.length-1] = arrfinal[i+1];
+            }
+        }
+        else{
+            arrDiv=arrfinal;
+        }
+        return arrDiv;
     }
 
 }
