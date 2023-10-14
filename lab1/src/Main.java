@@ -4,7 +4,7 @@ import java.util.Arrays;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        int[] array = {1,5,3};
+        int[] array = {2,5,4};
         int[] array2 = {0,5,4};
         ArrZahlen arr = new ArrZahlen(array);
 
@@ -15,5 +15,6 @@ public class Main {
         GrosseZahlen arr5 = new GrosseZahlen(array2);
         System.out.println(Arrays.toString(arr3.DifferenzArr(arr5)));
         System.out.println(Arrays.toString(arr3.MultiplikationArr(3)));
+        System.out.println(Arrays.toString(arr3.DivisionArr(2)));
     }
 }

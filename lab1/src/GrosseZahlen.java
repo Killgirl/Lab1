@@ -85,4 +85,18 @@ public class GrosseZahlen {
         }
         return arrMultiplik;
     }
+
+    public int[] DivisionArr(int a) {
+        int[] arrfinal = {};
+        int[] arrDiv = {};
+        int r=0;
+        for(int i = array.length-1; i > -1; i--){
+            arrfinal = Arrays.copyOf(arrfinal, arrfinal.length + 1);
+            
+            arrfinal[arrfinal.length-1] = array[i]/a+r;
+            r=array[i]%a;
+        }
+        return arrfinal;
+    }
+
 }
