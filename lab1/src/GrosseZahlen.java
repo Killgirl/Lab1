@@ -8,7 +8,7 @@ public class GrosseZahlen {
     }
     public int[] SummeArr(GrosseZahlen other){
         int[] arrfinal={};
-        int[] arrSeparat={};
+        int[] arrSumme={};
         for(int i = array.length-1; i > -1; i--){
             arrfinal = Arrays.copyOf(arrfinal, arrfinal.length + 1);
             arrfinal[arrfinal.length-1] = array[i]+other.array[i];
@@ -26,7 +26,11 @@ public class GrosseZahlen {
                 }
             }
         }
-        return arrfinal;
+        for(int i=arrfinal.length-1; i > -1; i--){
+            arrSumme = Arrays.copyOf(arrSumme, arrSumme.length + 1);
+            arrSumme[arrSumme.length-1] = arrfinal[i];
+        }
+        return arrSumme;
     }
 
 
