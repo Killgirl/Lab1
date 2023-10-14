@@ -3,6 +3,7 @@ public class ArrZahlen {
 
     public ArrZahlen(int[] arr)
     {
+
         this.array = arr;
     }
 

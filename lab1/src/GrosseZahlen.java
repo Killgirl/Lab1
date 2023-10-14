@@ -4,6 +4,7 @@ public class GrosseZahlen {
 
     public GrosseZahlen(int[] arr)
     {
+
         this.array = arr;
     }
     public int[] SummeArr(GrosseZahlen other){
