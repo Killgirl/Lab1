@@ -10,8 +10,8 @@ public class ElektronikShop {
     }
 
     public int billigsteTastatur(){
-        int billigste= -1;
-        for(int i=0; i<tastatur.length;i++){
+        int billigste= tastatur[0];
+        for(int i=1; i<tastatur.length;i++){
             if(tastatur[i]<billigste)
                 billigste=tastatur[i];
         }

@@ -16,5 +16,7 @@ public class Main {
         System.out.println(Arrays.toString(arr3.DifferenzArr(arr5)));
         System.out.println(Arrays.toString(arr3.MultiplikationArr(3)));
         System.out.println(Arrays.toString(arr3.DivisionArr(2)));
+        ElektronikShop shop1 =new ElektronikShop(array, array2);
+        System.out.println(shop1.billigsteTastatur());
     }
 }
