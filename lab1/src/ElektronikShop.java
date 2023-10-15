@@ -40,4 +40,15 @@ public class ElektronikShop {
         }
         return kaufen;
     }
+
+    public int kauf(int budget){
+        int kaufen=-1;
+        for (int i=0;i<tastatur.length;i++){
+            for (int j=0;j<usb.length;j++){
+                if((tastatur[i]+usb[j]<budget)&&(tastatur[i]+usb[j]>kaufen))
+                    kaufen=tastatur[i]+usb[j];
+            }
+        }
+        return kaufen;
+    }
 }
