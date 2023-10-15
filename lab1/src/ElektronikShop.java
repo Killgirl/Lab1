@@ -17,4 +17,17 @@ public class ElektronikShop {
         }
         return billigste;
     }
+
+    public int teuersteGegenstand(){
+        int teuerste=tastatur[0];
+        for(int i=1; i<tastatur.length;i++) {
+            if (tastatur[i] > teuerste)
+                teuerste = tastatur[i];
+        }
+        for(int i=0; i<usb.length;i++) {
+            if (usb[i] > teuerste)
+                teuerste = tastatur[i];
+        }
+        return teuerste;
+    }
 }
