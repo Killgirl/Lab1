@@ -30,4 +30,14 @@ public class ElektronikShop {
         }
         return teuerste;
     }
+
+    public int usbKauf(int budget){
+        int kaufen=-1;
+        for(int i=0; i<usb.length;i++){
+            if((usb[i]>kaufen)&&(usb[i]<budget)){
+                kaufen=usb[i];
+            }
+        }
+        return kaufen;
+    }
 }
