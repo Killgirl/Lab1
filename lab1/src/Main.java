@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         int[] array = {1,3,6};
-        int[] array2 = {0,5,4};
+        int[] array2 = {0,8,4};
         ArrZahlen arr = new ArrZahlen(array);
 
         System.out.println(arr.maximZahl());
@@ -18,5 +18,6 @@ public class Main {
         System.out.println(Arrays.toString(arr3.DivisionArr(2)));
         ElektronikShop shop1 =new ElektronikShop(array, array2);
         System.out.println(shop1.billigsteTastatur());
+        System.out.println(shop1.teuersteGegenstand());
     }
 }

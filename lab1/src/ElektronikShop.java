@@ -26,7 +26,7 @@ public class ElektronikShop {
         }
         for(int i=0; i<usb.length;i++) {
             if (usb[i] > teuerste)
-                teuerste = tastatur[i];
+                teuerste = usb[i];
         }
         return teuerste;
     }
