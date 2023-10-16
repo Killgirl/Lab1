@@ -20,7 +20,8 @@ public class Noten {
             if(array[i]-mult<3){
                 arrNotfinal[arrNotfinal.length-1] = mult ;
             }
-            arrNotfinal[arrNotfinal.length-1] = array[i] ;
+            else
+                arrNotfinal[arrNotfinal.length-1] = array[i] ;
         }
         for (int i = arrNotfinal.length-1; i > -1; i--){
             if(arrNotfinal[i]<40){
@@ -41,7 +42,8 @@ public class Noten {
             if(array[i]-mult<3){
                 arrNotfinal[arrNotfinal.length-1] = mult ;
             }
-            arrNotfinal[arrNotfinal.length-1] = array[i] ;
+            else
+                arrNotfinal[arrNotfinal.length-1] = array[i] ;
         }
         for (int i = arrNotfinal.length-1; i > -1; i--) {
             wertfinal=wertfinal+arrNotfinal[i];
@@ -58,8 +60,22 @@ public class Noten {
             if(array[i]-mult<3){
                 arrNotfinal[arrNotfinal.length-1] = mult ;
             }
-            arrNotfinal[arrNotfinal.length-1] = array[i] ;
+            else
+                arrNotfinal[arrNotfinal.length-1] = array[i] ;
         }
         return arrNotfinal;
+    }
+
+    public int grossteGerundete(){
+        int[] arrNotfinal={};
+        int grosste=-1;
+        for(int i = array.length-1; i > -1; i--){
+            int mult= ((array[i]/5)*5)+5;
+            arrNotfinal = Arrays.copyOf(arrNotfinal, arrNotfinal.length + 1);
+            if(array[i]-mult<3){
+                arrNotfinal[arrNotfinal.length-1] = mult ;
+            }
+            arrNotfinal[arrNotfinal.length-1] = array[i] ;
+        }
     }
 }
