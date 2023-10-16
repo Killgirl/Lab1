@@ -55,9 +55,9 @@ public class Noten {
     public int[] gerundeteNoten(){
         int[] arrNotfinal={};
         for(int i = array.length-1; i > -1; i--){
-            int mult= ((array[i]/5)*5)+5;
+            int mult= ((array[i]/5)+1)*5;
             arrNotfinal = Arrays.copyOf(arrNotfinal, arrNotfinal.length + 1);
-            if(array[i]-mult<3){
+            if(((array[i]-mult)<3)&&(array[i]>38)){
                 arrNotfinal[arrNotfinal.length-1] = mult ;
             }
             else
