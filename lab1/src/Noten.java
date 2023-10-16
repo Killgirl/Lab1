@@ -35,7 +35,7 @@ public class Noten {
     public int duchschnitt(){
 
         int[] arrNotfinal={};
-        int wertfinal={};
+        int wertfinal=0;
         for(int i = array.length-1; i > -1; i--){
             int mult= ((array[i]/5)*5)+5;
             arrNotfinal = Arrays.copyOf(arrNotfinal, arrNotfinal.length + 1);
@@ -75,7 +75,14 @@ public class Noten {
             if(array[i]-mult<3){
                 arrNotfinal[arrNotfinal.length-1] = mult ;
             }
-            arrNotfinal[arrNotfinal.length-1] = array[i] ;
+            else
+                arrNotfinal[arrNotfinal.length-1] = array[i] ;
         }
+        for(int i = arrNotfinal.length-1; i > -1; i--){
+            if(arrNotfinal[i]>grosste){
+                grosste=arrNotfinal[i];
+            }
+        }
+        return grosste;
     }
 }
