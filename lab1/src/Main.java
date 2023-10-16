@@ -6,6 +6,8 @@ public class Main {
     public static void main(String[] args) {
         int[] array = {1,3,6,2};
         int[] array2 = {1,1,4,1};
+        int[] arrShop = {10, 60, 25, 80};
+        int[] arrShop2 = {15, 30, 20, 40, 50};
 
         ArrZahlen arr = new ArrZahlen(array);
         assert(arr.maximZahl()==6);
@@ -28,15 +30,18 @@ public class Main {
         //assert (arr3.MultiplikationArr(9)==new int[]{12, 2, 5, 8});
         assert (arr3.DivisionArr(2)==new int[]{6, 8, 1});
         //assert (arr3.DivisionsArr(2)==new int[]{0, 6, 8, 1});
-        
+        System.out.println("Teste Pb3");
 
-        GrosseZahlen arr5 = new GrosseZahlen(array2);
-        System.out.println(Arrays.toString(arr3.DifferenzArr(arr5)));
-        System.out.println(Arrays.toString(arr3.MultiplikationArr(3)));
-        System.out.println(Arrays.toString(arr3.DivisionArr(2)));
-
-        ElektronikShop shop1 =new ElektronikShop(array, array2);
-        System.out.println(shop1.billigsteTastatur());
-        System.out.println(shop1.teuersteGegenstand());
+        ElektronikShop shop1 =new ElektronikShop(arrShop, arrShop2);
+        assert (shop1.billigsteTastatur()==10);
+        //assert (shop1.billigsteTastatur()==25);
+        assert (shop1.teuersteGegenstand()==80);
+        //assert (shop1.teuersteGegenstand()==60);
+        assert (shop1.usbKauf(43)==40);
+        //assert (shop1.usbKauf(43)==50);
+        assert (shop1.kauf(43)==40);
+        //assert (shop1.kauf(43)==-1);
+        System.out.println("Teste Pb4");
+        System.out.println("Teste");
     }
 }
