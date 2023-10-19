@@ -17,18 +17,10 @@ public class Main {
         TestArrZahlen.testMaxZahl();
         TestArrZahlen.testMinSumme();
         TestArrZahlen.testMaxSumme();
-
-        GrosseZahlen arr3 = new GrosseZahlen(array);
-        GrosseZahlen arr4 = new GrosseZahlen(array2);
-        assert Arrays.equals(arr3.SummeArr(arr4), new int[]{2, 5, 0, 3});
-        //assert Arrays.equals(arr3.SummeArr(arr4), new int[]{2, 4, 10, 3});
-        assert Arrays.equals(arr3.DifferenzArr(arr4), new int[]{2,2,1});
-        //assert Arrays.equals(arr3.SummeArr(arr4), new int[]{0, 2, 2, 1});
-        assert Arrays.equals(arr3.MultiplikationArr(9), new int[]{1, 2, 2, 5, 8});
-        //assert Arrays.equals(arr3.MultiplikationArr(9), new int[]{12, 2, 5, 8});
-        assert Arrays.equals(arr3.DivisionArr(2), new int[]{6, 8, 1});
-        //assert Arrays.equals(arr3.DivisionsArr(2), new int[]{0, 6, 8, 1});
-        System.out.println("Teste Pb3");
+        TestGrosseZahlen.testSumme();
+        TestGrosseZahlen.testDifferenz();
+        TestGrosseZahlen.testMultiplikation();
+        TestGrosseZahlen.testDivision();
 
         ElektronikShop shop1 =new ElektronikShop(arrShop, arrShop2);
         assert (shop1.billigsteTastatur()==10);
