@@ -3,27 +3,18 @@ import java.util.Arrays;
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         int[] array = {1,3,6,2};
         int[] array2 = {1,1,4,1};
         int[] arr5={4,9,9,9};
         int[] arr6={0,0,0,1};
         int[] arrShop = {10, 60, 25, 80};
         int[] arrShop2 = {15, 30, 20, 40, 50};
-        int[] arrNoten = {39, 44, 57, 76, 80, 99, 17};
 
-
-        Noten noten = new Noten(arrNoten);
-        assert Arrays.equals(noten.nichtAusreichend(), new int[]{20});
-        //assert Arrays.equals(noten.nichtAusreichend(), new int[]{17});
-        System.out.println(Arrays.toString(noten.gerundeteNoten()));
-        assert Arrays.equals(noten.gerundeteNoten(), new int[]{17, 100, 85, 80, 60, 45, 40});
-        //assert Arrays.equals(noten.gerundeteNoten(), new int[]{39, 44, 57, 76, 80, 99, 17});
-        assert (noten.grossteGerundete()==100);
-        //assert (noten.grossteGerundete()==99);
-        assert (noten.duchschnitt()==61);
-        //assert (noten.duchschnitt()==55);
-        System.out.println("Teste Pb1");
+        TestNoten.testNichtAusreichend();
+        TestNoten.testGerundeteNoten();
+        TestNoten.testDurchschnitt();
+        TestNoten.testGrossteGerundete();
 
         ArrZahlen arr = new ArrZahlen(array);
         assert(arr.maximZahl()==6);
