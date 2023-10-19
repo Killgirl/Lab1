@@ -7,7 +7,10 @@ public class GrosseZahlen {
 
         this.array = arr;
     }
-    public int[] SummeArr(GrosseZahlen other){
+    public int[] SummeArr(GrosseZahlen other)throws Exception{
+        if(array.length==0){
+            throw new Exception("Arr empty");
+        }
         int[] arrfinal={};
         int[] arrSumme={};
         for(int i = array.length-1; i > -1; i--){
@@ -34,7 +37,10 @@ public class GrosseZahlen {
         return arrSumme;
     }
 
-    public int[] DifferenzArr(GrosseZahlen other) {
+    public int[] DifferenzArr(GrosseZahlen other) throws Exception{
+        if(array.length==0){
+            throw new Exception("Arr empty");
+        }
         int[] arrfinal = {};
         int[] arrDiff = {};
         for(int i = array.length-1; i > -1; i--){
@@ -60,7 +66,10 @@ public class GrosseZahlen {
         return arrDiff;
     }
 
-    public int[] MultiplikationArr(int a) {
+    public int[] MultiplikationArr(int a)throws Exception {
+        if(array.length==0){
+            throw new Exception("Arr empty");
+        }
         int[] arrfinal = {};
         int[] arrMultiplik = {};
         for(int i = array.length-1; i > -1; i--){
@@ -87,7 +96,10 @@ public class GrosseZahlen {
         return arrMultiplik;
     }
 
-    public int[] DivisionArr(int a) {
+    public int[] DivisionArr(int a) throws Exception{
+        if(array.length==0){
+            throw new Exception("Arr empty");
+        }
         int[] arrfinal = {};
         int[] arrDiv = {};
         int r=0;

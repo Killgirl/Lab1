@@ -10,8 +10,11 @@ public class Noten {
         this.array = arr;
     }
 
-    public int[] nichtAusreichend(){
+    public int[] nichtAusreichend() throws Exception{
 
+        if(array.length==0){
+            throw new Exception("Keine Noten");
+        }
         int[] arrNotfinal={};
         int[] nichtAusreichend={};
         for(int i = array.length-1; i > -1; i--){
@@ -32,8 +35,11 @@ public class Noten {
         return nichtAusreichend;
     }
 
-    public int duchschnitt(){
+    public int duchschnitt()throws Exception{
 
+        if(array.length==0){
+            throw new Exception("Keine Noten");
+        }
         int[] arrNotfinal={};
         int wertfinal=0;
         for(int i = array.length-1; i > -1; i--){
@@ -52,7 +58,10 @@ public class Noten {
         return wertfinal;
     }
 
-    public int[] gerundeteNoten(){
+    public int[] gerundeteNoten()throws Exception{
+        if(array.length==0){
+            throw new Exception("Keine Noten");
+        }
         int[] arrNotfinal={};
         for(int i = array.length-1; i > -1; i--){
             int mult= ((array[i]/5)+1)*5;
@@ -66,7 +75,10 @@ public class Noten {
         return arrNotfinal;
     }
 
-    public int grossteGerundete(){
+    public int grossteGerundete()throws Exception{
+        if(array.length==0){
+            throw new Exception("Keine Noten");
+        }
         int[] arrNotfinal={};
         int grosste=-1;
         for(int i = array.length-1; i > -1; i--){

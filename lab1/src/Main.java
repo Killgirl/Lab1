@@ -6,9 +6,12 @@ public class Main {
     public static void main(String[] args) {
         int[] array = {1,3,6,2};
         int[] array2 = {1,1,4,1};
+        int[] arr5={4,9,9,9};
+        int[] arr6={0,0,0,1};
         int[] arrShop = {10, 60, 25, 80};
         int[] arrShop2 = {15, 30, 20, 40, 50};
         int[] arrNoten = {39, 44, 57, 76, 80, 99, 17};
+
 
         Noten noten = new Noten(arrNoten);
         assert Arrays.equals(noten.nichtAusreichend(), new int[]{20});
@@ -35,6 +38,9 @@ public class Main {
 
         GrosseZahlen arr3 = new GrosseZahlen(array);
         GrosseZahlen arr4 = new GrosseZahlen(array2);
+        GrosseZahlen arr7 = new GrosseZahlen(arr5);
+        GrosseZahlen arr8 = new GrosseZahlen(arr6);
+        System.out.println(Arrays.toString(arr7.SummeArr(arr8)));
         assert Arrays.equals(arr3.SummeArr(arr4), new int[]{2, 5, 0, 3});
         //assert Arrays.equals(arr3.SummeArr(arr4), new int[]{2, 4, 10, 3});
         assert Arrays.equals(arr3.DifferenzArr(arr4), new int[]{2,2,1});
