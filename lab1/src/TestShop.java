@@ -42,9 +42,9 @@ public class TestShop {
         int[] arrShop3 = {};
         ElektronikShop shop2= new ElektronikShop(arrShop3, arrShop2);
         ElektronikShop shop1 =new ElektronikShop(arrShop, arrShop2);
-        assert (shop2.usbKauf(43)==40);
+        assert (shop1.usbKauf(43)==40);
         try {
-            shop1.usbKauf(43);
+            shop2.usbKauf(0);
             assert false;
         }
         catch(Exception e)
@@ -59,9 +59,9 @@ public class TestShop {
         int[] arrShop3 = {};
         ElektronikShop shop2= new ElektronikShop(arrShop3, arrShop2);
         ElektronikShop shop1 =new ElektronikShop(arrShop, arrShop2);
-        assert (shop2.kauf(43)==40);
+        assert (shop1.kauf(43)==40);
         try {
-            shop1.kauf(43);
+            shop2.kauf(0);
             assert false;
         }
         catch(Exception e)
